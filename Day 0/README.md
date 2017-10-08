@@ -1,16 +1,23 @@
 # Your Device
 
-* Reasonably recent Laptop
-* Running OSX (Apple) or Windows
-* BATTERY LIFE: Must be sufficient to last atleast 4 hours.
+You must bring your own device to Advanced Training, and you will be using this for most of training and assessment in a hands on manner. 
 
-# Software Needed
+* Reasonably recent and powerful Laptop
+* Must run Windows (Preferred) or Mac OS (Apple)
+* BATTERY LIFE: Must be sufficient to last at-least 4 hours without power
 
-* Visual Studio Code
-* Optional: Visual Studio 2017
-* NodeJS 
-* NPM (Node Package Manager)
-* Microsoft Bot Emulator
+# Software Needed (IMPORTANT)
+
+Please install the software *before* you attend advanced training. We will not spend time going over installation. If you do not have the below software installed, you will be left behind. 
+
+If you do not have this software installed, MSPs have clear instructions to NOT help you install it on the day.
+
+* [Visual Studio Code](https://code.visualstudio.com/download)
+* Optional for Windows: [Visual Studio 2017] (https://www.visualstudio.com/downloads/)
+* [NodeJS](https://nodejs.org/en/download/)
+* [NPM (Node Package Manager)](https://www.npmjs.com/get-npm)
+* [Microsoft Bot Builder SDK](https://docs.microsoft.com/en-us/bot-framework/resources-tools-downloads) 
+* [Microsoft Bot Emulator](https://github.com/Microsoft/BotFramework-Emulator/releases/tag/v3.5.31)
 
 
 # What to Bring
