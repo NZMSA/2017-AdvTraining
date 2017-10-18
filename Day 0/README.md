@@ -45,7 +45,7 @@ Please ensure you are registered and have ACCESS to the following services. Agai
 
 All students should have this from Basic Training, to check, visit the [Microsoft Azure Portal](http://portal.azure.com) and check the Subscriptions tab to ensure you have either a "Dreamspark" or "Imagine" subscription listed, like below:
 
-![Photo]("/images/dreamspark.png")
+![Photo](images/dreamspark.png)
 
 If you don't, then visit [Microsoft Imagine](http://imagine.microsoft.com) to register yourself as a student, verify and activate Azure through the links on the site - but you really should have it from Basic Training!
 
@@ -65,5 +65,18 @@ We'll explain Custom Vision at Advanced Training, but for now, visit [customvisi
 Now this is the important one. We will be building a bot and its important we have a Bot Developer Account. visit [Micosoft Bot Framework - Dev Site](https://dev.botframework.com) and sign in. 
 
 
+# NodeJS and C#
 
+At Microsoft, we believe that if you can learn one language, you can learn them all. By now, you will have intermediate experience with C# through Basic Training. Because Apple Macs and OSX are not able to compile .NET, we have made the decision to use an open source language so that all students can have the same experience. Historically Mac users taking part in MSA would have had to use a different computer or a virtual machine.
 
+Both C# and NodeJS can be used to build intelligent chatbots on the Microsoft Platform, and we will be teaching you how to build with NodeJS. You are welcome to keep using C# and some of the team will be able to help with it too. The assessment can also be done in either C# or NodeJS.
+
+NodeJS is relatively easy to learn (it's just a flavour of Javascript), but you may find it useful to refresh your knowledge of the language with the following links:
+
+Easy NodeJS Bot Quickstart from Microsoft: [https://docs.microsoft.com/en-us/bot-framework/nodejs/bot-builder-nodejs-quickstart](https://docs.microsoft.com/en-us/bot-framework/nodejs/bot-builder-nodejs-quickstart)
+
+Other useful NodeJS Links:
+
+* [https://www.w3schools.com/nodejs/](https://www.w3schools.com/nodejs/)
+* [https://www.tutorialspoint.com/nodejs/](https://www.tutorialspoint.com/nodejs/)
+* [https://github.com/Microsoft/nodejs-guidelines](https://github.com/Microsoft/nodejs-guidelines)
