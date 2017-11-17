@@ -1,13 +1,13 @@
-# 3.3 Integrating Easy Tables with Node.js (GET Request) 
+# 3.3 Integrating Easy Tables with Node.js (GET Request)
 
 ### 3.3.1 Introduction
 
 - We've now got a database up and running with some content inside of it, we now want to interact with the Database so that we can retrieve persisted user data.
 
 - When you query EasyTables, you are returned the complete dataset of every single instance inside your database, and so firstly
-we'll complelte a get request from postman to the EasyTables, and then have a look at how the data is stored.
+we'll complete a get request from postman to the EasyTables, and then have a look at how the data is stored.
 
-{PHOTO HERE} 
+{PHOTO HERE}
 
 -So yo can see, that the data is all there and every single property you want is there, this includes the username and FavouriteFood, the things that we care about.
 
@@ -32,18 +32,18 @@ we'll complelte a get request from postman to the EasyTables, and then have a lo
                 }
 
                 session.send("Retrieving your favourite foods");
-                food.displayFavouriteFood(session, session.conversationData["username"]);  // <---- THIS LINE HERE IS WHAT WE NEED 
+                food.displayFavouriteFood(session, session.conversationData["username"]);  // <---- THIS LINE HERE IS WHAT WE NEED
             }
         }
     ]).triggerAction({
         matches: 'GetFavouriteFood'
     });
 ```
-All this does is checks thesession to see if you are logged in,and if you are not it prompts you, otherwise you are able  to get your favourite foods.
+All this does is checks the session to see if you are logged in, and if you are not it prompts you, otherwise you are able  to get your favourite foods.
 
 ### 3.3.1.2
 
-Over here, we want to create an intermediary function that will call the function that will retrieve food for us, this is done as a best practice, as we want modifiability in our code, it provides a seperations of concerns between where we are processing our LUIS code, and our code that is used to calll EasyTables, this makes maintenance of code and debugging a lot easier than if we directlyl called our function from the LuisDialog file.
+Over here, we want to create an intermediary function that will call the function that will retrieve food for us, this is done as a best practice, as we want modifiability in our code, it provides a separations of concerns between where we are processing our LUIS code, and our code that is used to call EasyTables, this makes maintenance of code and debugging a lot easier than if we directly called our function from the LuisDialog file.
 
 ```Javascript
 
@@ -57,7 +57,7 @@ What this does is, it calls the getFavouriteFood function, that we will edit bel
 
 ### 3.3.2 Creating Function
 We now want to integrate this inside our application and so we will start off by the function to send the get request.
-We want to export the function so that you can use it outside of the script file and it can be reffered to by the other files
+We want to export the function so that you can use it outside of the script file and it can be referred to by the other files
 
 The parameters of the functions will be, the URL You want to connect to, the SESSION you are currently in, the USERNAME you want to find and the callback function, which will process the value that has been returned.
 
@@ -97,10 +97,10 @@ function handleFavouriteFoodResponse(message, session, username) {
             }
         }        
     }
-    
+
     // Print all favourite foods for the user that is currently logged in
     session.send("%s, your favourite foods are: %s", username, allFoods);                
-    
+
 }
 ```
 Here we have the function that will handle the response to our favourite food, what it does is it gets all of the foods and the users associated with it, iterates through the array that the users and foods are all stored in, and it checks to see if the users name matches all of their favourite foods, and then it returns all of the users favourite foods.
@@ -108,4 +108,3 @@ Here we have the function that will handle the response to our favourite food, w
 Great! Now we're all done, and it should look like this
 
 {PHOTO HERE}
-
