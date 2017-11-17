@@ -1,8 +1,8 @@
-#3.5 Creating a delete request and sending it to easytables
+#3.5 Creating a delete request and sending it to easy tables
 
-### Introductioon
+### Introduction
 
-We want the user to be able to remove favourites if they change their mind about something 
+We want the user to be able to remove favourites if they change their mind about something
 
 We will do this the same way we have done the other two functions
 
@@ -70,8 +70,7 @@ We now want to refer this inside of LUIS so that we can call it when we detect t
         }
 
     }
-    
-   ```
+```
 
 ### 3.5.2 Delete function
 
@@ -97,6 +96,7 @@ exports.deleteFavouriteFood = function deleteData(url,session, username ,favouri
     })
 
 };
+
 ```
 
 We again, like the post request have to attach headers, and the url will be different this time, we need the particular id of the entry we want to delete, and so we must append that to the url.
