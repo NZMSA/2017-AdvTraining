@@ -1,4 +1,4 @@
-# 3.4 Creating a post request and sending it to EasyTablels
+# 3.4 Creating a post request and sending it to EasyTables
 
 ### Introduction
 
@@ -20,7 +20,7 @@ exports.sendFavouriteFood = function postFavouriteFood(session, username, favour
 Here, again like previously we are creating the function that will link easytables to the LUIS dialog, this is because
 we want a seperation of concerns between them and so that it is easier to maintain them, and debugging.
 
-The parameters are the current session, the username, and the favourite food we want to post. 
+The parameters are the current session, the username, and the favourite food we want to post.
 
 We will now go on to create the function that posts to easytables.
 
@@ -40,7 +40,7 @@ exports.postFavouriteFood = function getData(url, username, favouriteFood){
             "favouriteFood" : favouriteFood
         }
       };
-      
+
       request(options, function (error, response, body) {
         if (!error && response.statusCode === 200) {
             console.log(body);
