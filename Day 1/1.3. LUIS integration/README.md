@@ -133,7 +133,7 @@ luis.startDialog(bot);
  
 ```
 
-In you LuisDialog.js file you will need the following:
+In your LuisDialog.js file you will need the following:
 
 ```js
 
@@ -165,5 +165,128 @@ exports.startDialog = function (bot) {
     }).triggerAction({
         matches: 'GetCalories'
     });
+}
+```
+
+## Putting it all together
+
+Once you have gone through the above example for the GetCalories intent, you can apply the same process to add the rest of the intents.
+
+Below are some sample utterances to help you get started. Be creative and put yourself into the mind of the user when generating utterances. The better your utterances match how the user will express them selfs the accurately LUIS will be able to determine the users intent.
+
+Note: [ $food ] represents a food item (e.g. pizza) which has been marked in LUIS as an entity. For more information see "Add entities" above.
+
+1. DeleteFavourite
+* "delete [ $food ] from my favourites"
+* "remove [ $food ] from my favourites list"
+* "I want to delete [ $food ]"
+* I don ' t like [ $food ] anymore
+
+2. GetFavouriteFood
+* "what are my favourite foods"
+* "what do i like"
+
+3. LookForFavourite
+* "my favourite food is [ $food ]"
+* "[ $food ] is life"
+* i like [ $food ]
+
+4. WantFood
+* "[ $food ] is what I want"
+* "[ $food ] is what I want to eat"
+* "I ' m starving , I want a [ $food ]"
+* "I want a [ $food ]"
+
+5. WelcomeIntent
+* "hi"
+* "hello"
+
+Once you are done your LuisDialog.js file should look like this:
+
+```js
+var builder = require('botbuilder');
+
+
+exports.startDialog = function (bot) {
+
+    var recognizer = new builder.LuisRecognizer('https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/{YOUR_APP_ID_HERE}?subscription-key={YOUR_KEY_HERE}&timezoneOffset=0&q=');
+
+    bot.recognizer(recognizer);
+
+    bot.dialog('WantFood', function (session, args) {
+        if (!isAttachment(session)) {
+            // Pulls out the food entity from the session if it exists
+            var foodEntity = builder.EntityRecognizer.findEntity(args.intent.entities, 'food');
+
+            // Checks if the food entity was found
+            if (foodEntity) {
+                session.send('Looking for restaurants which sell %s...', foodEntity.entity);
+                // Insert logic here later
+            } else {
+                session.send("No food identified! Please try again");
+            }
+        }
+
+    }).triggerAction({
+        matches: 'WantFood'
+    });
+
+    bot.dialog('DeleteFavourite', [
+        // Insert delete logic here later
+    ]).triggerAction({
+        matches: 'DeleteFavourite'
+
+    });
+
+    bot.dialog('GetCalories', function (session, args) {
+        if (!isAttachment(session)) {
+
+            // Pulls out the food entity from the session if it exists
+            var foodEntity = builder.EntityRecognizer.findEntity(args.intent.entities, 'food');
+
+            // Checks if the for entity was found
+            if (foodEntity) {
+                session.send('Calculating calories in %s...', foodEntity.entity);
+                // Insert logic here later
+
+            } else {
+                session.send("No food identified! Please try again");
+            }
+        }
+    }).triggerAction({
+        matches: 'GetCalories'
+    });
+
+    bot.dialog('GetFavouriteFood', [
+       // Insert favourite food logic here later
+    ]).triggerAction({
+        matches: 'GetFavouriteFood'
+    });
+
+    bot.dialog('LookForFavourite', [
+        // Insert logic here later
+    ]).triggerAction({
+        matches: 'LookForFavourite'
+    });
+    
+
+    bot.dialog('WelcomeIntent', [
+        // Insert logic here later
+    ]).triggerAction({
+        matches: 'WelcomeIntent'
+    });
+}
+
+// Function is called when the user inputs an attachment
+function isAttachment(session) { 
+    var msg = session.message.text;
+    if ((session.message.attachments && session.message.attachments.length > 0) || msg.includes("http")) {
+        
+        //call custom vision here later
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 ```
