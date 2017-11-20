@@ -1,7 +1,7 @@
 # Goal of Today
 
 
-Today we will introduce you to Conversations as a Platform, its purpose and get started building a demo bot.
+Today we will introduce you to Fundamentals: DevOps and Roles in IT & Soft Skills
 
 # Conversations as a Platform
 

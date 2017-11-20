@@ -1,4 +1,4 @@
-# 2.1 LUIS Natural Language Integration
+# 1.3 LUIS Natural Language Integration
 
 ## Introduction
 LUIS is an acronym for Language Understanding Intelligence Service. LUIS can be trained to recognise the intent behind what the user says to your bot.

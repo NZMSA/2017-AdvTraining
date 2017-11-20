@@ -1,6 +1,6 @@
-# 1.2. Introduction to Bot Framework
+# 1.1. Introduction to Bot Framework
 
-### 1.2.1 Create a bot with the Bot Builder SDK for Node.js [Source](https://docs.microsoft.com/en-us/bot-framework/nodejs/bot-builder-nodejs-quickstart)
+### 1.1.1 Create a bot with the Bot Builder SDK for Node.js [Source](https://docs.microsoft.com/en-us/bot-framework/nodejs/bot-builder-nodejs-quickstart)
 The Bot Builder SDK for Node.js is a framework for developing bots. It is easy to use and models frameworks like Express & restify to provide a familiar way for JavaScript developers to write bots.+
 This tutorial walks you through building a bot by using the Bot Builder SDK for Node.js. You can test the bot in a console window and with the Bot Framework Emulator.
 
