@@ -1,6 +1,5 @@
 # Goal of Today
 
-
 Today we will introduce you to Fundamentals: DevOps and Roles in IT & Soft Skills
 
 # Conversations as a Platform
