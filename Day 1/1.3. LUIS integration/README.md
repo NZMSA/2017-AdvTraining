@@ -10,7 +10,7 @@ The goal here is to create a LUIS app. When you're finished, you'll have a LUIS 
 * [Call a LUIS app using Node.js](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-get-started-node-get-intent)
 
 # Create a new LUIS app 
-Start by going to [www.luis.ai](www.luis.ai) and singing in.
+Start by going to [www.luis.ai](www.luis.ai) and signing in.
 You can create and manage your applications on the My Apps page. You can always access this page by clicking My Apps on the top navigation bar of the LUIS web page.
 
 * Start by selecting "New App" to create a new LUIS app.
@@ -89,6 +89,8 @@ Add eight different utterances before going on to the next step. The more uttera
 Once you've trained your app, you can test it by typing a test utterance and pressing Enter. The results display the score associated with each intent. Check that the top scoring intent corresponds to the intent of each test utterance.
 
 ## Publish your app
+### Getting key to publish
+https://docs.microsoft.com/en-us/azure/cognitive-services/luis/azureibizasubscription
 
 1. Select *Publish App* from the left-side menu 
 2. click *Publish*.
@@ -128,7 +130,7 @@ var bot = new builder.UniversalBot(connector, function (session) {
     session.send('Sorry, I did not understand \'%s\'. Type \'help\' if you need assistance.', session.message.text);
 });
 
-// This line will call the function in your LuisDialo.js file
+// This line will call the function in your LuisDialog.js file
 luis.startDialog(bot);
  
 ```
@@ -290,3 +292,4 @@ function isAttachment(session) {
     }
 }
 ```
+
