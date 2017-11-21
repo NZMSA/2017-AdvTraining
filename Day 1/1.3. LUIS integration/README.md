@@ -90,7 +90,6 @@ Once you've trained your app, you can test it by typing a test utterance and pre
 
 ## Publish your app
 ### Getting key to publish
-https://docs.microsoft.com/en-us/azure/cognitive-services/luis/azureibizasubscription
 
 1. Select *Publish App* from the left-side menu 
 2. click *Publish*.
