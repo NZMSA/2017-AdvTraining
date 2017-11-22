@@ -1,0 +1,13 @@
+﻿{
+  "supports": {},
+  "dependencies": {
+    "Microsoft.Bot.Connector.DirectLine": "3.0.2",
+    "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
+    "Microsoft.Rest.ClientRuntime": "2.3.10",
+    "NETStandard.Library": "1.6.1",
+    "Xamarin.Forms": "2.4.0.282"
+  },
+  "frameworks": {
+    "netstandard1.6": {}
+  }
+}

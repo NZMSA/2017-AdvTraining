@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinFoodApp"
+             x:Class="XamarinFoodApp.MainPage">
+
+    <StackLayout Spacing="10" Padding="10" HorizontalOptions="Fill" VerticalOptions="Fill" Orientation="Vertical">
+
+        <ListView x:Name="MessageListView"
+                 VerticalOptions="FillAndExpand"
+                 HorizontalOptions="Fill"
+                 >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Text}" Detail="{Binding Sender}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Entry Placeholder="Message"
+        VerticalOptions="End"
+        HorizontalOptions="Fill"
+        HorizontalTextAlignment="End"
+        Completed="Send"
+        />
+    </StackLayout>
+
+</ContentPage>
