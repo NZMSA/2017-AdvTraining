@@ -1,0 +1,23 @@
+{
+  "name": "msa_food_bot",
+  "version": "1.0.0",
+  "description": "This is my Food Bot repository.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dtrikam/MSA_Food_bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dtrikam/MSA_Food_bot/issues"
+  },
+  "homepage": "https://github.com/dtrikam/MSA_Food_bot#readme",
+  "dependencies": {
+    "botbuilder": "^3.12.0",
+    "restify": "^6.3.4"
+  }
+}
