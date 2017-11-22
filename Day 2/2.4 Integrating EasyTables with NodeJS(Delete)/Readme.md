@@ -1,13 +1,49 @@
-#3.5 Creating a delete request and sending it to easy tables
+#3.5 Creating a delete request and sending it to easytables
 
 ### Introduction
 
-We want the user to be able to remove favourites if they change their mind about something
+We want the user to be able to remove favourites if they change their mind about something 
 
 We will do this the same way we have done the other two functions
 
 
-### 3.5.1 Intermediary Function And connecting to LUIS
+
+### 3.5.1 Delete Call
+
+Headover to API/RestClient.js and paste this code inside there
+
+```javascript
+exports.deleteFavouriteFood = function deleteData(url,session, username ,favouriteFood, id, callback){
+    var options = {
+        url: url + "\\" + id,
+        method: 'DELETE',
+        headers: {
+            'ZUMO-API-VERSION': '2.0.0',
+            'Content-Type':'application/json'
+        }
+    };
+
+    request(options,function (err, res, body){
+        if( !err && res.statusCode === 200){
+            console.log(body);
+            callback(body,session,username, favouriteFood);
+        }else {
+            console.log(err);
+            console.log(res);
+        }
+    })
+
+};
+```
+
+We again, like the post request have to attach headers, and the url will be different this time, we need the particular id of the entry we want to delete, and so we must append that to the url.
+
+We then process the request by using a callback or we log the error.
+
+
+### 3.5.2 Intermediary Function And connecting to LUIS
+
+Inside the favouritefoods.js file, use this code so that you can again connect LUIS and  and the API call
 
 ```javascript
 exports.deleteFavouriteFood = function deleteFavouriteFood(session,username,favouriteFood){
@@ -70,40 +106,11 @@ We now want to refer this inside of LUIS so that we can call it when we detect t
         }
 
     }
-```
+    
+   ```
 
-### 3.5.2 Delete function
-
-```javascript
-exports.deleteFavouriteFood = function deleteData(url,session, username ,favouriteFood, id, callback){
-    var options = {
-        url: url + "\\" + id,
-        method: 'DELETE',
-        headers: {
-            'ZUMO-API-VERSION': '2.0.0',
-            'Content-Type':'application/json'
-        }
-    };
-
-    request(options,function (err, res, body){
-        if( !err && res.statusCode === 200){
-            console.log(body);
-            callback(body,session,username, favouriteFood);
-        }else {
-            console.log(err);
-            console.log(res);
-        }
-    })
-
-};
-
-```
-
-We again, like the post request have to attach headers, and the url will be different this time, we need the particular id of the entry we want to delete, and so we must append that to the url.
-
-We then process the request by using a callback or we log the error.
 
 
 ### 3.5.3 Handler function
 
-I will allow you to implement this as a callback function for practice.
+I will allow you to implement a callback function for practice.
