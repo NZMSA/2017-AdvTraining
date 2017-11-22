@@ -1,6 +1,6 @@
-# 3.3 Integrating Easy Tables with Node.js (GET Request) 
+# 2.3 Integrating Easy Tables with Node.js (GET Request) 
 
-## 3.3.1 Introduction
+## 2.3.1 Introduction
 
 - We've now got a database up and running with some content inside of it, we now want to interact with the Database so that we can retrieve persisted user data.
 
@@ -13,7 +13,7 @@ So you can see, that the data is all there and every single property you want is
 
 
 
-## 3.3.1 Creating REST Call
+## 2.3.1 Creating REST Call
 
 Head over to the RestClient.js File
 
@@ -35,7 +35,7 @@ exports.getFavouriteFood = function getData(url, session, username, callback){
 };
 ```
 
-## 3.3.2 Handling calls and responses to the REST API
+## 2.3.2 Handling calls and responses to the REST API
 Create a file called FavouriteFoods.js file inside the controller folder, and this is where we will store all of our intermediary functions that link LUIS to our database.
 
 Over here, we want to create an intermediary function that will call the function that will retrieve food for us, this is done as a best practice, as we want modifiability in our code, it provides a seperations of concerns between where we are processing our LUIS code, and our code that is used to calll EasyTables, this makes maintenance of code and debugging a lot easier than if we directly called our function from the LuisDialog file.
@@ -53,7 +53,7 @@ What this does is, it calls the getFavouriteFood function, that we will edit bel
 
 And here we have our get request, we now want our callback function to process the resulting data that we have so that we can process the bulk data received and make some sense of it.
 
-## 3.3.2 (Cont) Handling the response to the function
+## 2.3.2 (Cont) Handling the response to the function
 Bare with me here, as it might get a little confusing we have a few methods that we use to handle the processing.
 
 ```javascript
@@ -84,7 +84,7 @@ function handleFavouriteFoodResponse(message, session, username) {
 Here we have the function that will handle the response to our favourite food, what it does is it gets all of the foods and the users associated with it, iterates through the array that the users and foods are all stored in, and it checks to see if the users name matches all of their favourite foods, and then it returns all of the users favourite foods.
 
 
-## 3.3.3 Adding the call inside LUIS
+## 2.3.3 Adding the call inside LUIS
 
 ```javascript
    bot.dialog('GetFavouriteFood', [

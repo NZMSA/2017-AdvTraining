@@ -1,4 +1,4 @@
-#3.5 Creating a delete request and sending it to easytables
+#2.4 Creating a delete request and sending it to easytables
 
 ### Introduction
 
@@ -8,7 +8,7 @@ We will do this the same way we have done the other two functions
 
 
 
-### 3.5.1 Delete Call
+### 2.4.1 Delete Call
 
 Headover to API/RestClient.js and paste this code inside there
 
@@ -41,7 +41,7 @@ We again, like the post request have to attach headers, and the url will be diff
 We then process the request by using a callback or we log the error.
 
 
-### 3.5.2 Intermediary Function And connecting to LUIS
+### 2.4.2 Intermediary Function And connecting to LUIS
 
 Inside the favouritefoods.js file, use this code so that you can again connect LUIS and  and the API call
 
@@ -111,6 +111,6 @@ We now want to refer this inside of LUIS so that we can call it when we detect t
 
 
 
-### 3.5.3 Handler function
+### 2.4.3 Handler function
 
 I will allow you to implement a callback function for practice.

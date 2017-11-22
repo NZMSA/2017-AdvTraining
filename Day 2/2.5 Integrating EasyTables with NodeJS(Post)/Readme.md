@@ -1,4 +1,4 @@
-# 3.4 Creating a post request and sending it to EasyTables
+# 2.5 Creating a post request and sending it to EasyTables
 
 ## Introduction
 
@@ -6,7 +6,7 @@ Similarly, like the previous tutorial for the GET Request, we want to be able to
 
 
 
-## 3.4.1 Creating the REST Call
+## 2.5.1 Creating the REST Call
 ```javascript
 
 exports.postFavouriteFood = function getData(url, username, favouriteFood){
@@ -47,7 +47,7 @@ and their favourite food.
 We then check the response status and logthe response.
 
 
-## 3.4.2 Creating the intermediary function and LUIS call
+## 2.5.2 Creating the intermediary function and LUIS call
 
 Here we will create a function inside the directory Controler inside the FavouriteFoods.js that will be called from the LUIS directory to post a request.
 
@@ -104,7 +104,7 @@ We are making a reference to the intermediary function inside of LUIS so that we
 
 We will now go on to create the function that posts to easytables.
 
-## 3.4.3     Extra
+## 2.5.3     Extra
 
 If you want, you can create your own callback function to handle the response and display the output to users. I will leave it up to you
 for practice.
