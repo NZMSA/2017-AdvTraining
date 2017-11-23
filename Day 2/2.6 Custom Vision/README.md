@@ -3,6 +3,12 @@
 Custom vision is a way for you to analyze images. In this module we will be training our model to recognize 2 items. 
 Before we begin, make sure you sign up for a Microsoft account and sign in via <https://customvision.ai/>
 
+### Useful links for Cognitive Services & Custom Vision.
+[Custom Vision](https://customvision.ai/)
+[Cognitive Services Suite](https://azure.microsoft.com/en-us/services/cognitive-services/)
+[Sentiment Analysis](https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics/)
+
+
 ## Set up
 After signing in, you a have nice big option for you to create a project. It will then ask for a project name, decription and domains. Fill these in for your type or project
 
@@ -11,11 +17,11 @@ The next step is to train your model and for our FoodBot we would like to identi
 We want to be able to identify coffee and chips. On the left hand pane click on *'+'* and enter the name of each item we want to identify.
 Once you've complete this step you should have something like this. 
 
-![Training](photos/1.png?raw=true)
+![](photos/1.png?raw=true)
 
 Now we look for 5 images each for *chips* and *coffee* for custom vision to reference to. Upload these images to custom vision via the 'Add images' ribbon and enter the appropriate tag. Repeat this step for chips.
 
-![AddImages](photos/2.png?raw=true)
+![](photos/2.png?raw=true)
 
 Finally find the green *Train* button at the top and our model has now been trained. 
 
@@ -28,7 +34,7 @@ Let's create a new js file and call it `CustomVision.js` where we will make a po
 Inside our `LuisDialog.js` insert the following at the top
 
 ```
-var cognitive = require('./CognitiveDialog');
+var customVision = require('./CognitiveDialog');
 ``` 
 
 Inside LuisDialog.js we include a function to check if it is an image url, for demonstation purposes will assume that the link will always contain *http*.
@@ -81,7 +87,10 @@ function validResponse(body){
 To find the relevant URL's go back to <https://customvision.ai/>
 `YOUR-URL` can be found under the *Performance* tab click on *Prediction URL*
 
-`YOUR-PREDICTION-KEY` can be found by clicking on the cog icon on the right
+`YOUR-PREDICTION-KEY` can be found by clicking on the cog icon on the right.
+
+### Important
+Please make sure that your bot dialogs checks if the user message is an attachment *before* the bot dialog returns a message.
 
 ## Done!
 
