@@ -11,11 +11,11 @@ The next step is to train your model and for our FoodBot we would like to identi
 We want to be able to identify coffee and chips. On the left hand pane click on *'+'* and enter the name of each item we want to identify.
 Once you've complete this step you should have something like this. 
 
-![Training](photos/1.png)
+![Training](photos/1.png?raw=true)
 
 Now we look for 5 images each for *chips* and *coffee* for custom vision to reference to. Upload these images to custom vision via the 'Add images' ribbon and enter the appropriate tag. Repeat this step for chips.
 
-![AddImages](photos/2.png)
+![AddImages](photos/2.png?raw=true)
 
 Finally find the green *Train* button at the top and our model has now been trained. 
 
@@ -25,10 +25,10 @@ To do so we must first know when an image url is being sent and the second part 
 
 Let's create a new js file and call it `CustomVision.js` where we will make a post request to custom vision
 
-Inside our `app.js` insert the following at the top
+Inside our `LuisDialog.js` insert the following at the top
 
 ```
-var cognitive = require('./controller/CognitiveDialog');
+var cognitive = require('./CognitiveDialog');
 ``` 
 
 Inside LuisDialog.js we include a function to check if it is an image url, for demonstation purposes will assume that the link will always contain *http*.
@@ -83,7 +83,7 @@ To find the relevant URL's go back to <https://customvision.ai/>
 
 `YOUR-PREDICTION-KEY` can be found by clicking on the cog icon on the right
 
-##Done!
+## Done!
 
 
 
