@@ -7,9 +7,7 @@
 5.  You may need to do the authentification stuff
 6.  Select your GitHub repo and a branch
 7.  Show off the continuous deployment
-8.  Press "ok"
-
-Now to setup testing:  
+8.  Press "ok" 
 9.  Go to https://ngrok.com/downloads  
 10. Download correct version for you  
 11. Open bot emulator  
