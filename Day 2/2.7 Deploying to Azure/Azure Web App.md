@@ -26,6 +26,7 @@
 6.  Fill in the details  
 7.  Messaging Endpoint = URL entered into bot emulator  
 		&nbsp;&nbsp;&nbsp;&nbsp;*Ensure the URL is https:// instead of http://*  
+		&nbsp;&nbsp;&nbsp;&nbsp;*include the /api/messages in the URL*  
 8.  "Create Microsoft App Id and Password"  
 9.  Copy all the details (App ID, Password) to use later  
 		&nbsp;&nbsp;&nbsp;&nbsp;*You MUST click Finish and Go Back*  
