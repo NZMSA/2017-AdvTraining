@@ -1,0 +1,114 @@
+﻿body {
+    font-size: 25px;
+}
+
+#heading {
+    text-align: center;
+    font-size: 50px;
+}
+
+#logo {
+    position: absolute;
+    left: 25px;
+    width: 10%;
+    min-width: 100px;
+    max-width: 500px;
+}
+
+#left-content {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+#right-content {
+    width: 50%;
+    height: 100%;
+    float: right;
+}
+
+#right-content img {
+    width: 100%;
+    max-width: 500px;
+}
+
+#content {
+    width: 75%;
+    height: 750px;
+    margin: 0 auto;
+}
+
+#chat {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 300px;
+    height: 400px;
+}
+
+#chat-button {
+    width: 100px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+#chat-frame {
+    height: 400px;
+    width: 300px;
+}
+
+#chat-frame img {
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.hide {
+    display: none;
+}
+
+@media only screen and (max-width: 960px) {
+    body {
+        text-align: center;
+    }
+
+    #heading {
+        text-align: center;
+        font-size: 50px;
+    }
+
+    #logo {
+        position: relative;
+        left: auto;
+        min-width: 100px;
+        max-width: 500px;
+    }
+
+    #left-content {
+        width: 100%;
+        height: auto;
+    }
+
+    #right-content {
+        width: 100%;
+        height: auto;
+    }
+
+    #right-content img {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    #content {
+        width: 100%;
+        height: auto;
+    }
+}

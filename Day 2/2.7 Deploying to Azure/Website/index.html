@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>MSA FoodBot</title>
+
+    <!--Linking CSS files to style the website-->
+    <link href="style.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+        function openChat() {
+            var frame = document.getElementById("chat-frame");
+            frame.className = "";
+            var img = document.getElementById("chat-button");
+            img.className = "hide";
+        }
+
+        function closeChat() {
+            var frame = document.getElementById("chat-frame");
+            frame.className = "hide";
+            var img = document.getElementById("chat-button");
+            img.className = "";
+        }
+    </script>
+</head>
+<body>
+
+    <div id="titleBlock">
+        <img src="res/images/msp_logo.png" id="logo" />
+        <h1 id="heading">MSA FoodBot 2017</h1>
+    </div>
+
+    <div id="content">
+        <div id="left-content">
+            <p>
+                Website Instructions:<br/><br/>
+                1. Setup a new git repo<br/>
+                2. Create an ASP.NET Web Application in GitRepo<br/>
+                3. Add new items: html, css and JavaScript<br/>
+                4. Right-click the html file and "Set As Start Page"<br/>
+                5. Link stuff in html file<br/>
+                6. Add the following meta tag to the head<br/>
+                ' &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt; '<br/>
+                this gives the browser instructions on how to control the page's dimensions and scaling.
+            </p>
+        </div>
+        <div id="right-content">
+            <img src="res/images/vs.PNG" />
+            <img src="res/images/botframework.PNG" />
+        </div>
+    </div>
+
+    <div id="chat">
+        <img id="chat-button" src="res/images/chatico.png" onclick="openChat()" />
+        <div id="chat-frame" class="hide">
+            <iframe src='https://webchat.botframework.com/embed/andrew-test-bot?s=PJFurSqPjgU.cwA.HN4.ehCU9QX6AbBjXcEHoYy2F18CnK_d5tre-zpTjk1kCcc'></iframe>
+			<img src="res/images/minus.png" onclick="closeChat()" />
+        </div>
+    </div>
+
+</body>
+</html>
