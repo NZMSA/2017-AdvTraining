@@ -24,6 +24,8 @@ The parameters of the functions will be, the URL You want to connect to, the SES
 
 Here we see, if there is an error then we log it to the console to see what's happening, otherwise we pass it on to our callback.
 ```javascript
+var request = require('request')
+
 exports.getFavouriteFood = function getData(url, session, username, callback){
     request.get(url, {'headers':{'ZUMO-API-VERSION': '2.0.0'}}, function(err,res,body){
         if(err){
