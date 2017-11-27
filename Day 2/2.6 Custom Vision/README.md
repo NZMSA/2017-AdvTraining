@@ -3,10 +3,19 @@
 Custom vision is a way for you to analyze images. In this module we will be training our model to recognize 2 items. 
 Before we begin, make sure you sign up for a Microsoft account and sign in via <https://customvision.ai/>
 
-### Useful links for Cognitive Services & Custom Vision.
+### Useful links for Cognitive Services & Custom Vision
+
 [Custom Vision](https://customvision.ai/)
+
 [Cognitive Services Suite](https://azure.microsoft.com/en-us/services/cognitive-services/)
+
 [Sentiment Analysis](https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics/)
+
+[QnA Maker](https://azure.microsoft.com/en-us/services/cognitive-services/qna-maker/)
+
+In terms of the assessment "Integration with Cognitive Services (with multiple cases)." - Multiple cases means if you're using custom vision to fufil this requirement, your model will need to recognise more than 1 item.
+
+Please note when we refer to Cognitive Services we're refering to the the whole suite so you're not limited to using only custom vision
 
 
 ## Set up
